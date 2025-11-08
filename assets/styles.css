@@ -1,10 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   a {
     @apply hover:no-underline underline underline-offset-4 decoration-1;
+  }
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
   }
 }
 
@@ -26,11 +27,16 @@ select {
 }
 
 button {
-  @apply border border-gray-200 bg-gray-100 dark:bg-gray-700 p-3 rounded
-    disabled:cursor-not-allowed;
+  @apply border text-white dark:text-black bg-black dark:bg-white p-3 rounded
+    disabled:cursor-not-allowed cursor-pointer;
+}
+
+button[type="button"] {
+  @apply border text-white dark:text-black bg-black dark:bg-white p-3 rounded
+    disabled:cursor-not-allowed cursor-pointer;
 }
 
 button[type="submit"] {
-  @apply border border-gray-200 bg-gray-100 dark:bg-gray-700 p-3 rounded
-    disabled:cursor-not-allowed;
+  @apply border text-white dark:text-black bg-black dark:bg-white p-3 rounded
+    disabled:cursor-not-allowed cursor-pointer;
 }
